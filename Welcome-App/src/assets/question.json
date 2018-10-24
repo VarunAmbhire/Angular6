@@ -1,0 +1,68 @@
+[
+               {    
+                   "id": 1,
+                    "content":"Largest Continent on Planet",
+                    "option":["Africa","Asia","North America","South America"],
+                    "answer":"option[1]"
+               },
+               {
+                   "id": 2,
+                    "content":"Smallest Continent on Planet",
+                    "option":["Africa","Europe","Australia","South America"],
+                    "answer":"option[2]"
+                },
+                {                            
+                    "id":3,
+                    "content":"Largest river on Planet",
+                    "option":["Amazon","Ganga","Indus","Nile"],
+                    "answer":"option[3]"
+                },
+                {
+                    "id":4,
+                    "content":"Biggest country on Planet by Area",
+                    "option":["China","USA","Russia","India"],
+                    "answer":"option[2]"
+                },
+                {
+                    "id":5,
+                    "content":"Biggest country on Planet by polpulation",
+                    "option":["China","India","USA","Russia"],
+                    "answer":"option[0]"
+                },
+                {
+                    "id":6,
+                    "content":"Capital of India",
+                    "option":["Mumbai","Chennai","Kolkata","New Delhi"],
+                    "answer":"option[3]"
+                },    
+                {
+                    "id":7,
+                    "content":"Largest ocean on Planet",
+                    "option":["Pacific","Indian","Atlantic","Arctic"],
+                    "answer":"option[0]"
+                },
+                {
+                    "id":8,
+                    "content":"Highest Mountain on Planet",
+                    "option":["Mt. Kanchenjonga","Mt. Everest","Mt.GodwinAustin","Mt.CaperHorn"],
+                    "answer":"option[1]"
+                },
+                {
+                    "id":9,
+                    "content":"Largest dry Desert on Planet",
+                    "option":["Thar","Atacama","Great Australian desert","Sahara"],
+                    "answer":"option[3]"
+                },
+                {
+                    "id":10,
+                    "content":"Largest military expenditure by Country",
+                    "option":["USA","India","China","Russia"],
+                    "answer":"option[0]"
+                },
+                {
+                    "id":11,
+                    "content":"Fastest animal on Planet",
+                    "option":["Lion","human","Chetah","Leopord"],
+                    "answer":"option[2]"
+                }
+]

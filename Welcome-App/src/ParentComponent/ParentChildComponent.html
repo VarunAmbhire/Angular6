@@ -1,0 +1,5 @@
+<div>
+    {{childButtonState}}
+    <st-toggleButton [textContent]="text" [offColor]="'blue'" [onColor]="'red'" (stateChange)="childEvent($event)"></st-toggleButton>
+    <st-starButton [rating]="2.5" data-toggle="tooltip" title="{{hoverRate}}" (hoverEvent)="hoverEvent($event)"></st-starButton>
+</div>

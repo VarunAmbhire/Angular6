@@ -1,0 +1,7 @@
+<div>
+    Enter Number : <input type="number" [(ngModel)]="numb">
+    <input type="button" value="Fact" (click)="checkFact()">
+</div><hr>
+<div>
+    <li *ngFor="let fact of factList, let i=index" [ngStyle]="{'background-color': i%2==0 ? 'red':'blue'}">{{fact}}</li>
+</div>

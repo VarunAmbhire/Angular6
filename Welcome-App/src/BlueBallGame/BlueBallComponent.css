@@ -1,0 +1,19 @@
+.ball{
+    border: none;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    border-radius: 50%  
+}
+.resetButton{
+    height: 50px;
+    width: 200px;
+    font-size: 20px   
+}
+div{
+    box-align: center
+}

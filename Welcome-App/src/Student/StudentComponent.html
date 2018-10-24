@@ -1,0 +1,30 @@
+<div>
+
+<input type="button" (click)='increment()' [value]='count'><br>
+
+
+    Display Students Details
+        <div><h1 [innerHtml]='company'></h1>
+            <h2 [innerHtml]='"Mumbai"'></h2>
+            Id : {{stud['rollNo']}} <br>
+            First Name : {{stud['firstName']}} <br>
+            Last Name : {{stud['lastName']}} <br>
+            CGPA : {{stud['cgpa']}}
+        </div>
+<hr>
+        <table>
+            <tr>
+                <td>Id</td>
+                <td>First Name</td>
+                <td>Last Name</td>
+                <td>CGPA</td>
+            </tr>
+            <tr *ngFor="let student of studentList">
+                <td>{{student['rollNo']}}</td>
+                <td>{{student['firstName']}}</td>
+                <td>{{student['lastName']}}</td>
+                <td>{{student['cgpa']}}</td>
+                    </tr>
+            </table>
+               
+</div>

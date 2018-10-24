@@ -1,0 +1,49 @@
+<div >
+    <form class="form-horizontal"  name="studForm" >
+        Roll Number:<input type="number" class="form-control" [(ngModel)]="rollNo" name="rollNo" required="true">
+        Name : <input type="text" class="form-control" [(ngModel)]="name" name="name" required="true">
+        Age : <input type="number" class="form-control" [(ngModel)]="age" name="age" required>
+        Date : <input type="date" class="form-control" [(ngModel)]="date" name="date" required="true">
+        Email:<input type="email" class="form-control" [(ngModel)]='email' name="email" required>
+        <div >
+            Gender :<input type="radio" class="radio-inline" name="gender" value=true [(ngModel)]='isMale' >Male 
+                <input type="radio" class="radio-inline" name="gender" value=false [(ngModel)]='isMale'>Female
+        </div>       
+    </form> 
+    <div align="center">
+       <span><input type="button" value="Add" (click)="add()" class="btn btn-default" [disabled]="addDisable">
+       <input type="button" value="Update" (click)="update()" class="btn btn-default" [disabled]="updateDisable"></span>
+    </div>
+</div>
+
+<hr>
+<div>
+    <table class="table">
+        <tr>
+            <td>Name</td>
+            <td>Roll No</td>
+            <td>Age</td>
+            <td>Date</td>
+            <td>Email</td>
+            <td>Gender</td>
+        </tr>
+        <tr *ngFor="let student of studentData">
+            <td>{{student.name}}</td>
+            <td>{{student.rollNo}}</td>
+            <td>{{student.age}}</td>
+            <td>{{student.date}}</td>
+            <td>{{student.email}}</td>
+            <td>{{student.isMale | isMaleToText}}</td>
+            <td>
+                <button type="button" class="btn btn-default btn-sm" (click)="edit(student)">
+                    <span class="glyphicon glyphicon-pencil"></span>Edit
+                </button>
+            </td>
+            <td>
+                <button type="button" class="btn btn-default btn-sm" (click)="remove(student.rollNo)">
+                        <span class="glyphicon glyphicon-remove"></span>Remomve
+                </button>
+            </td>
+        </tr>
+    </table>
+</div>

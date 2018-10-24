@@ -1,0 +1,17 @@
+<div>
+    <div>
+        <h1>{{title}}</h1>
+    </div>
+    <h3>Attempt : {{attempt}}</h3>
+    <h3>Game Status : {{gameStatus}}</h3>
+    <div>
+        <input type="button" class="ball" [disabled]="check[i]" *ngFor="let num of numList; let i =index" 
+        [id]="i" [value]='i+1' (click)="checkBall($event)">
+    </div>
+<br>
+<br>
+<br>
+    <div>
+        <input type="button" class="resetButton" *ngIf="visibility" [value]='"Reset"' (click)="reset()">
+    </div>
+</div>

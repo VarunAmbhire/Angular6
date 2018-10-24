@@ -1,0 +1,13 @@
+div {
+ background-color: blue;
+ border-color: black;
+}
+h1{
+    color: white;
+    background-color: black;
+    border-color: rgb(255, 0, 140)
+}
+li{
+    border-color: red;
+    color: azure;
+}

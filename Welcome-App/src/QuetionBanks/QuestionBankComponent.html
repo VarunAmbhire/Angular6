@@ -1,0 +1,10 @@
+<div align="center" [hidden]="visible">
+
+    <p>{{queId}} {{que}}</p>
+
+    <div  *ngFor="let opt of queOption, let i=index">
+        <input type="radio" [value]="i" name="option" [(ngModel)]="optionChoose">{{opt}} <br>
+    </div>
+    <input type="button" value="Next" (click)="next()">
+</div>
+
