@@ -1,0 +1,14 @@
+<div class="container-fluid">
+    <div class="alert alert-primary" >
+        Enter Task : <input type="text" [(ngModel)]="task" (change)="value($event)">
+    </div><hr>
+    <div class="alert alert-primary "  *ngFor="let tk of taskList, let i=index">
+            <li><label [id]="i" [ngStyle]="{'text-decoration': tk.isDone ? 'line-through':'none'}">{{tk.task}}</label>&nbsp;&nbsp;             
+               <span> 
+                   <!-- <input type="checkbox" [checked]="tk.isDone" (change)="taskDone($event, i)">&nbsp; -->
+                   <st-toggleButton (stateChange)="childEvent($event,i)" [textContent]="tk.isDone" [textContent]="tk.isDone" ></st-toggleButton>&nbsp;
+                   <button type="button"  class="btn btn-outline-dark"  (click)="remove(i)">x</button>  
+            </span>  
+            </li>
+    </div>
+</div>

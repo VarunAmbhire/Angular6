@@ -7,7 +7,7 @@ import { Component, Input, EventEmitter, Output } from "@angular/core";
 export class ToggleButtonComponent{
 
     @Input()
-    textContent:string
+    textContent:boolean
     @Input()
     onColor:string
     @Input()
@@ -17,29 +17,24 @@ export class ToggleButtonComponent{
     stateChange:EventEmitter<string>=new EventEmitter()
 
 
-    constructor(){
-        console.log("In Constructor")
-        console.log(this.textContent+" in constructor")
-    }
+    constructor(){ }
 
     ngOnInit(){
-        console.log("In NgOnInit")
-        console.log(this.textContent+" in NgOninit"+this.onColor)
-        this.state="Off"               
-        this.stateChange.emit(this.state)
-        let button=document.getElementById("toggleButton")
-        button.style.backgroundColor=this.offColor
+        if(this.textContent){
+            this.state="Done"
+        }else if(!this.textContent){
+            this.state="Pending"
+        }
     }
 
     toggle=()=>{
-        let button=document.getElementById("toggleButton")
-        
-        if(button.style.backgroundColor==this.offColor){
-            button.style.backgroundColor=this.onColor
-            this.state="On"
-        }else{
-            button.style.backgroundColor=this.offColor
-            this.state="Off"
+        console.log(this.textContent)
+        if(this.textContent){
+            this.state="Pending"
+            this.textContent=false
+        }else if(!this.textContent){
+            this.state="Done"
+            this.textContent=true
         }
         this.stateChange.emit(this.state)
        }

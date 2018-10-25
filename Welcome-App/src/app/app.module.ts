@@ -16,6 +16,7 @@ import { Summary } from '../ResponsiveWeb/Summary';
 import { ParentChildComponent } from '../ParentComponent/ParentChildComponent';
 import { ToggleButtonComponent } from '../ParentComponent/ToggleButtonComponet';
 import { StarButtonComponent } from '../ParentComponent/StarButtonComponent';
+import { ToDoComponent } from '../ToDoList/ToDoComponent';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { StarButtonComponent } from '../ParentComponent/StarButtonComponent';
     Summary,
     ParentChildComponent,
     ToggleButtonComponent,
-    StarButtonComponent
+    StarButtonComponent,
+    ToDoComponent
   ],
   imports: [
     BrowserModule,
