@@ -1,0 +1,18 @@
+<div>
+    <form class="form form-group" #form="ngForm">
+    Roll No : <input type="number" name="rollNumber" class="form form-control" [(ngModel)]="rollNumber" required>
+    Name : <input type="text" name="name" class="form form-control"  [(ngModel)]="name" required>
+    Age : <input type="number" name="age" class="form form-control" [(ngModel)]="age" required>
+    Email : <input type="email" name="email" class="form form-control" [(ngModel)]="email" required>
+    Date : <input type="date" name="date" class="form form-control" [(ngModel)]="date" required><br>
+    Gender :&nbsp;
+            <input type="radio" name="gender" [value]="true" [(ngModel)]="isMale" checked>Male &nbsp;
+            <input type="radio" name="gender" [value]="false" [(ngModel)]="isMale">Female
+           <br><br>
+        </form>
+
+    <input type="button"  class="btn btn-dark" value="Add" (click)="add()" [disabled]="form.invalid">
+    
+
+    {{status}}
+</div>

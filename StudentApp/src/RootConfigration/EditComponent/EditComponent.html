@@ -1,0 +1,15 @@
+<div>
+    <form class="form form-group" #editFrm="ngForm">
+            Roll No : <input type="number" class="form form-control" [(ngModel)]="editRollNumber" name="editRollNumber" required>
+            Name : <input type="text" class="form form-control" [(ngModel)]="editName" name="editName" required>
+            Age : <input type="number" class="form form-control" [(ngModel)]="editAge" name="editAge" required>
+            Email : <input type="email" class="form form-control" [(ngModel)]="editEmail" name="editEmail" required>
+            Date : <input type="text" class="form form-control" [(ngModel)]="editDate" name="editDate" required><br>
+            Gender :&nbsp;<input type="radio" name="gender" [value]="true" [(ngModel)]="editIsMale">Male&nbsp;
+                    <input type="radio" name="gender" [value]="false" [(ngModel)]="editIsMale">Female
+        <br><br>
+    </form>    
+        <input type="button" class="btn btn-dark" value="Update" (click)="update()" [disabled]="editFrm.invalid">
+    
+        {{status}}
+    </div>

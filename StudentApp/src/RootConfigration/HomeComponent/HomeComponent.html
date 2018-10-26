@@ -1,0 +1,23 @@
+<div>
+    <table class="table table-striped">
+        <tr>
+            <td>Roll No</td>
+            <td>Name</td>
+            <td>Age</td>
+            <td>Email</td>
+            <td>Date</td>
+            <td>Gender</td>
+        </tr>
+        <tr *ngFor="let student of studentList">
+                <td>{{student.rollNo}}</td>
+                <td>{{student.name}}</td>
+                <td>{{student.age}}</td>
+                <td>{{student.email}}</td>
+                <td>{{student.date}}</td>
+                <td>{{student.isMale}}</td>
+                <td><input type="button" value="Edit" class="btn btn-outline-primary" routerLink="../edit/{{student.rollNo}}"></td>
+                <td><input type="button" value="Delete" class="btn btn-outline-primary" (click)="delete(student.rollNo)"></td>
+            </tr>
+    </table>
+</div>
+
