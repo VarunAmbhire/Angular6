@@ -1,0 +1,32 @@
+<div class="container">
+
+    <div class="rounded border border-primary">
+    <div class="navbar navbar-expand-sm bg-primary navbar-light text-white">Product List</div><br><br>
+
+    <div>
+        &nbsp; Filter by :&nbsp;&nbsp; 
+        <input type="text" [(ngModel)]="filter" (ngModelChange)="filterChange($event)">
+    </div><br><br>
+
+    <div>
+        <table class="table table">
+            <tr class="text-primary">
+                <td><input type="button" class="btn btn-primary" [(ngModel)]="imageState" (click)="hideImage()"></td>
+                <td>Product</td>
+                <td>Code</td>
+                <td>Available</td>
+                <td>Price</td>
+                <td>5 Star Rating</td>
+            </tr>
+            <tr *ngFor="let prod of displayList" routerLink="../productdetail/{{prod.productId}}">
+                <td ><img src="{{prod.imageUrl}}" *ngIf="imageHide" height="25" width="25"></td>
+                <td class="text-primary">{{prod.productName}}</td>
+                <td>{{prod.productCode}}</td>
+                <td>{{prod.releaseDate}}</td>
+                <td>${{prod.price}}</td>
+                <td><st-star [rating]="prod.starRating" data-toggle="tooltip" (hoverEvent)="hoverEvent($event)"></st-star></td>
+            </tr>
+        </table>
+    </div>
+    </div>
+</div>

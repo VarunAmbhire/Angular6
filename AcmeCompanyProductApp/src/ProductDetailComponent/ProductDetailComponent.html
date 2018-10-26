@@ -1,0 +1,31 @@
+<div class="container ">
+    <div class="rounded border border-primary">
+    <div class="navbar navbar-expand-sm bg-primary navbar-light text-white">Product Detail: {{prodName}} </div><br>
+    <br>
+    <br>
+<div class="row">&nbsp;&nbsp;&nbsp;&nbsp;
+    <div class="col-lg-2"> 
+        Name : <br> 
+        Code : <br>
+        Description : <br>
+        Availability: <br>
+        Price : <br>
+        5 Star Rating : 
+    
+    </div> 
+    <div class="col-lg-4">
+         {{prodName}}<br>
+         {{prodCode}}<br>
+         {{prodDescription}}<br>
+         {{prodAvailability}}<br>
+         ${{prodPrice}}<br>
+         <st-star [rating]="prodrate"  style="overflow:hidden;"></st-star>
+    </div>
+
+    <img class="col-lg-4" src="{{prodImage}}" height="200" width="200" >
+</div>
+    <div class="navbar navbar-expand-sm bg-light navbar-default">
+    <button type="button" class="btn btn-default" routerLink="../../productlist"><b><</b> Back</button>
+</div>
+</div>
+</div>
